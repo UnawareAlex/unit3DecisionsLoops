@@ -11,7 +11,12 @@ public class RockPaperScissors
         
         if (player1.equals("paper"))
         {
-            int result = player1.compareTo(player2);
-        
+            if (player1.equals(player2))
+            {
+                System.out.println("It's a tie!");
+            }
         }
+    }
+}
+        
     
