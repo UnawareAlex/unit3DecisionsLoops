@@ -15,7 +15,7 @@ public class PalindromeTester
    {
       String str, another = "y";
       int left, right;
-      Scanner s = new Scanner(System.in);
+      Scanner s = new Scanner(System.in)
 
       while (another.equalsIgnoreCase("y")) // allows y or Y
       {
