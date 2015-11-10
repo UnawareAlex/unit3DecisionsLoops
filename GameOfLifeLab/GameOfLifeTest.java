@@ -98,8 +98,9 @@ public class GameOfLifeTest
          *  4 - - - x - - 
          *  5 - - - - - -
          */
-        
         GameOfLife game = new GameOfLife();
+        game.createNextGeneration();
+        game.createNextGeneration();
         final int ROWS = game.getNumRows();
         final int COLS = game.getNumCols();
 
