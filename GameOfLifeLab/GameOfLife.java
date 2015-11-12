@@ -172,6 +172,7 @@ public class GameOfLife
     {
         GameOfLife game = new GameOfLife();
         game.createNextGeneration();
+        world.show
     }
 
 }
