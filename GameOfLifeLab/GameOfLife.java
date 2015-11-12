@@ -171,8 +171,13 @@ public class GameOfLife
     public static void main(String[] args)
     {
         GameOfLife game = new GameOfLife();
-        game.createNextGeneration();
-        world.show
-    }
+        for (int generations = 1; generations <= 10; generations++)
+        {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {}
+            game.createNextGeneration();
+        }
 
+    }
 }

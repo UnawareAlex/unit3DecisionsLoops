@@ -42,6 +42,9 @@ Nonfunctional Requirements:
 
 Additional Requirements:
 
+* Create a 5x5 grid
+* Populate grid with live cells (portrayed by Rock Actor) and dead cells (empty space)
+* 
 * 
 	
 
