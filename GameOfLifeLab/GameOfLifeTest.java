@@ -45,6 +45,9 @@ public class GameOfLifeTest
     {
         /* expected pattern for initial state
          *  (X: alive; -: dead)
+         *  
+         *  This is testing my intial generation to make sure it matches with the coordinates 
+         *      I entered in the GameOfLife class
          * 
          *    0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
          *  0  - - - - - - - - - - - - - - - - - - - - 
@@ -68,6 +71,9 @@ public class GameOfLifeTest
          *  18 - - - - - - - - - - - - - - - - - - - - 
          *  19 - - - - - - - - - - - - - - - - - - - - 
          *  20 - - - - - - - - - - - - - - - - - - - - 
+         *  
+         *  Sorry for the spacing on the grid, it is being a pain since it is large and I have 
+         *      double-digit numbers
          */
         
         GameOfLife game = new GameOfLife();
@@ -126,6 +132,9 @@ public class GameOfLifeTest
         /* verify that the actual pattern matches the expected pattern after 3 generations         *  
         /* expected pattern for initial state
          *  (X: alive; -: dead)
+         *  
+         *  This is testing my third generation to make sure it matches with the coordinates 
+         *       determined by my createNextGeneration method in the GameOfLife class
          * 
          *    0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
          *  0  - - - - - - - - - - - - - - - - - - - - 
@@ -149,6 +158,9 @@ public class GameOfLifeTest
          *  18 - - - - - - - - - - - - - - - - - - - - 
          *  19 - - - - - - - - - - - - - - - - - - - - 
          *  20 - - - - - - - - - - - - - - - - - - - - 
+         *  
+         *  Sorry for the spacing on the grid, it is being a pain since it is large and I have 
+         *      double-digit numbers
          */
         GameOfLife game = new GameOfLife();
         game.createNextGeneration();
