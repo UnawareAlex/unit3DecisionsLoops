@@ -68,7 +68,7 @@ Additional Requirements:
          - - - - - - - - - - - - - - - - - - - - 
          - - - - - - - - - - - - - - - - - - - - 
 * The game runs based on user input (User is prompted how many generations they want to run)
-* Time interval between each generation is equal to 1 second
+* Time interval between each new generation is equal to .75 seconds
 * If current generation is too large for grid size, it is cut off and only the part within the 20x21 grid shown
     
 
