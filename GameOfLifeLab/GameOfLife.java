@@ -52,145 +52,78 @@ public class GameOfLife
      */
     private void populateGame()
     {
-        // constants for the location of the three cells initially alive
-        final int X1 = 6, Y1 = 6;
-        final int X2 = 13, Y2 = 6;
-        final int X3 = 7, Y3 = 7;
-        final int X4 = 12, Y4 = 7;
-        final int X5 = 8, Y5 = 8;
-        final int X6 = 11, Y6 = 8;
-        final int X7 = 7, Y7 = 9;
-        final int X8 = 8, Y8 = 9;
-        final int X9 = 9, Y9 = 9;
-        final int X10 = 10, Y10 = 9;
-        final int X11 = 11, Y11 = 9;
-        final int X12 = 12, Y12 = 9;
-        final int X13 = 6, Y13 = 10;
-        final int X14 = 13, Y14 = 10;
-        final int X15 = 7, Y15 = 11;
-        final int X16 = 8, Y16 = 11;
-        final int X17 = 9, Y17 = 11;
-        final int X18 = 10, Y18 = 11;
-        final int X19 = 11, Y19 = 11;
-        final int X20 = 12, Y20 = 11;
-        final int X21 = 8, Y21 = 12;
-        final int X22 = 11, Y22 = 12;
-        final int X23 = 7, Y23 = 13;
-        final int X24 = 12, Y24 = 13;
-        final int X25 = 6, Y25 = 14;
-        final int X26 = 13, Y26 = 14;
+        // Arrays for the x and y positions of the cells initially alive
 
-        //Int[] xArray;
-        //xArray = new Int[26];
-        //xArray[0] = 
+        int[] xArray;
+        xArray = new int[26];
+            xArray[0] = 6;
+            xArray[1] = 13;
+            xArray[2] = 7;
+            xArray[3] = 12;
+            xArray[4] = 8;
+            xArray[5] = 11;
+            xArray[6] = 7;
+            xArray[7] = 8;
+            xArray[8] = 9;
+            xArray[9] = 10;
+            xArray[10] = 11;
+            xArray[11] = 12;
+            xArray[12] = 6;
+            xArray[13] = 13;
+            xArray[14] = 7;
+            xArray[15] = 8;
+            xArray[16] = 9;
+            xArray[17] = 10;
+            xArray[18] = 11;
+            xArray[19] = 12;
+            xArray[20] = 8;
+            xArray[21] = 11; 
+            xArray[22] = 7;
+            xArray[23] = 12;
+            xArray[24] = 6;
+            xArray[25] = 13;
+        
+        int[] yArray;
+        yArray = new int[26];
+            yArray[0] = 6;
+            yArray[1] = 6;
+            yArray[2] = 7;
+            yArray[3] = 7;
+            yArray[4] = 8;
+            yArray[5] = 8;
+            yArray[6] = 9;
+            yArray[7] = 9;
+            yArray[8] = 9;
+            yArray[9] = 9;
+            yArray[10] = 9;
+            yArray[11] = 9;
+            yArray[12] = 10;
+            yArray[13] = 10;
+            yArray[14] = 11;
+            yArray[15] = 11;
+            yArray[16] = 11;
+            yArray[17] = 11;
+            yArray[18] = 11;
+            yArray[19] = 11;
+            yArray[20] = 12;
+            yArray[21] = 12;
+            yArray[22] = 13;
+            yArray[23] = 13;
+            yArray[24] = 14;
+            yArray[25] = 14;
+
         // the grid of Actors that maintains the state of the game
-        //  (alive cells contains actors; dead cells do not)
+        // (alive cells contains actors; dead cells do not)
         Grid<Actor> grid = world.getGrid();
         
-        // create and add cells (a type of Actor) to the three intial locations
-        Cell cell1 = new Cell();
-        Location loc1 = new Location(Y1, X1);
-        grid.put(loc1, cell1);
+        // create and add cells (a type of Actor) to the intial locations
         
-        Cell cell2 = new Cell();
-        Location loc2 = new Location(Y2, X2);
-        grid.put(loc2, cell2);
-        
-        Cell cell3 = new Cell();
-        Location loc3 = new Location(Y3, X3);
-        grid.put(loc3, cell3);
-        
-        Cell cell4 = new Cell();
-        Location loc4 = new Location(Y4, X4);
-        grid.put(loc4, cell4);
-        
-        Cell cell5 = new Cell();
-        Location loc5 = new Location(Y5, X5);
-        grid.put(loc5, cell5);
-        
-        Cell cell6 = new Cell();
-        Location loc6 = new Location(Y6, X6);
-        grid.put(loc6, cell6);
-        
-        Cell cell7= new Cell();
-        Location loc7 = new Location(Y7, X7);
-        grid.put(loc7, cell7);
-        
-        Cell cell8 = new Cell();
-        Location loc8 = new Location(Y8, X8);
-        grid.put(loc8, cell8);
-        
-        Cell cell9 = new Cell();
-        Location loc9 = new Location(Y9, X9);
-        grid.put(loc9, cell9);
-        
-        Cell cell10 = new Cell();
-        Location loc10 = new Location(Y10, X10);
-        grid.put(loc10, cell10);
-        
-        Cell cell11 = new Cell();
-        Location loc11 = new Location(Y11, X11);
-        grid.put(loc11, cell11);
-        
-        Cell cell12 = new Cell();
-        Location loc12 = new Location(Y12, X12);
-        grid.put(loc12, cell12);
-        
-        Cell cell13 = new Cell();
-        Location loc13 = new Location(Y13, X13);
-        grid.put(loc13, cell13);
-        
-        Cell cell14 = new Cell();
-        Location loc14 = new Location(Y14, X14);
-        grid.put(loc14, cell14);
-        
-        Cell cell15 = new Cell();
-        Location loc15 = new Location(Y15, X15);
-        grid.put(loc15, cell15);
-        
-        Cell cell16 = new Cell();
-        Location loc16 = new Location(Y16, X16);
-        grid.put(loc16, cell16);
-        
-        Cell cell17 = new Cell();
-        Location loc17 = new Location(Y17, X17);
-        grid.put(loc17, cell17);
-        
-        Cell cell18 = new Cell();
-        Location loc18 = new Location(Y18, X18);
-        grid.put(loc18, cell18);
-        
-        Cell cell19 = new Cell();
-        Location loc19 = new Location(Y19, X19);
-        grid.put(loc19, cell19);
-        
-        Cell cell20 = new Cell();
-        Location loc20 = new Location(Y20, X20);
-        grid.put(loc20, cell20);
-        
-        Cell cell21 = new Cell();
-        Location loc21 = new Location(Y21, X21);
-        grid.put(loc21, cell21);
-        
-        Cell cell22 = new Cell();
-        Location loc22 = new Location(Y22, X22);
-        grid.put(loc22, cell22);
-        
-        Cell cell23 = new Cell();
-        Location loc23 = new Location(Y23, X23);
-        grid.put(loc23, cell23);
-        
-        Cell cell24 = new Cell();
-        Location loc24 = new Location(Y24, X24);
-        grid.put(loc24, cell24);
-        
-        Cell cell25 = new Cell();
-        Location loc25 = new Location(Y25, X25);
-        grid.put(loc25, cell25);
-        
-        Cell cell26 = new Cell();
-        Location loc26 = new Location(Y26, X26);
-        grid.put(loc26, cell26);
+        for (int i = 0; i <= 25; i++) //iterates through the arrays for the next x,y coordinate
+        {
+            Cell cell = new Cell();
+            Location loc = new Location(yArray[i], xArray[i]);
+            grid.put(loc, cell);
+        }
     }
 
     /**
