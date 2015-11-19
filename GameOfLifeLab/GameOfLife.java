@@ -220,7 +220,7 @@ public class GameOfLife
         for (int i = 1; i <= generations; i++)
         {
             try {
-                Thread.sleep(750);
+                Thread.sleep(250);
             } catch (InterruptedException e) {}
             game.createNextGeneration();
         }
